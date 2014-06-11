@@ -3,7 +3,7 @@ class JobApplicationsController < ApplicationController
   before_action :logged_in?
 
   def index
-    @job_applications = JobApplication.where(user: current_user)
+    @job_applications = JobApplication.where(user: current_user).all
   end
 
   def new
