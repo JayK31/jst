@@ -15,6 +15,7 @@ JstApp::Application.routes.draw do
   #   resources :products
   resources :users do
     resources :job_applications
+    resources :goals
   end
   get  "/session/new"  => "session#new"
   post "/session"      => "session#create"

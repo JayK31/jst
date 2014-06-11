@@ -1,0 +1,26 @@
+<div>
+  <h2>Goals</h2>
+  <ul>
+    <li>
+      <%= link_to "Create new goal.", new_user_goal_path %>
+    </li>
+  </ul>
+  <table>
+    <% @goals.each do |goal| %>
+      <tr>
+        <td>
+          <%= link_to goal.goal, [current_user, goal] %>
+        </td>
+        <td>
+          <%= goal.accomplishments %>
+        </td>
+        <td>
+          <%= link_to "Edit", edit_user_goal_path(current_user, goal) %>
+        </td>
+        <td>
+          <%= link_to "Delete", [current_user, goal], method: :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

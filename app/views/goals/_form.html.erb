@@ -1,0 +1,14 @@
+<%= form_for [current_user, @goal] do |f| %>
+  <%= f.label :goal %>
+  <%= f.text_field :goal %>
+  <%= f.label :date_created %>
+  <%= f.date_field :date_created %> 
+  <%= f.label :estimated_completion_date %>
+  <%= f.date_field :estimated_completion_date %>
+  <%= f.label :actual_completion_date %>
+  <%= f.date_field :actual_completion_date %>
+  <%= f.label :accomplishments %>
+  <%= f.text_field :accomplishments %>
+  <%= f.submit %>
+<% end %>
+
